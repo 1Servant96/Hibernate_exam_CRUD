@@ -20,7 +20,6 @@ public class DbConnection {
         properties.put(Environment.HBM2DDL_AUTO, "create");
         properties.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQLDialect");
         properties.put(Environment.SHOW_SQL, "true");
-
     Configuration configuration = new Configuration();
         configuration.addProperties(properties);
         configuration.addAnnotatedClass(Person.class);

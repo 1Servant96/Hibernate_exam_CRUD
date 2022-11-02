@@ -12,6 +12,7 @@ public class App {
     static Scanner scannerS = new Scanner(System.in);
     static Scanner scannerN = new Scanner(System.in);
 
+
     public static void main(String[] args) {
         HibernateDao hibernateDao = new HibernateDao();
         while (true) {
@@ -28,7 +29,7 @@ public class App {
                 }
                 case "2" -> {
                     System.out.println("Enter the id of person");
-                    Person result = hibernateDao.read(scannerS.nextLine());
+                    Person result = hibernateDao.read(scannerN.nextLine());
                     System.out.println("Created: " + result);
                     System.out.println();
                 }
@@ -56,6 +57,7 @@ public class App {
                 "Press 2 to read person\n" +
                 "Press 3 to update person \n" +
                 "Press 4 to delete person\n" +
+                "Press 5 to stop the programm" +
                 "-----------------------------------"
         );
     }
